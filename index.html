@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Igbunu Oneyibo</title>
+
+    <!--#region Fonts-->
+
+    <!--#region Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Homemade+Apple&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--#endregion-->
+
+    <!--#region Fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/baa9e79eee.js"
+      crossorigin="anonymous"
+    ></script>
+    <!---#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region Scripts-->
+
+      <!--#region Bootstrap-->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous"
+      />
+      <!-- #endregion -->
+
+      <!--#region jQuery-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          //jQuery
+          //#region html
+          $("h3").addClass("mb-1 mb-md-2");
+          //#endregion
+
+          //#region info section
+          $("#info-inner").addClass(
+            "sticky-md-top d-flex min-vh-100 flex-column justify-content-between mx-xxl-2"
+          );
+          $("#info-header").addClass(
+            "d-flex flex-row justify-content-between pt-md-2"
+          );
+          $("#greeting").addClass("w-75")
+          $("#foot").addClass(
+            "d-flex flex-nowrap flex-column align-items-center mb-xxl-5 pb-xxl-3"
+          );
+          $("#social-links >li").addClass("list-inline-item");
+          //#endregion
+
+          //#region skills section
+
+            //#region coding languages
+            $("#code-lang-list >ul>li").addClass(
+              "col me-0 py-2 d-flex align-items-center justify-content-center"
+            );
+            $("#code-lang-list >ul").addClass(
+              "list-unstyled text-center align-middle mx-3 mx-xxl-4 px-xxl-5 pt-lg-2 pt-xl-0 w-100"
+            );
+            $(".code-lang-img").addClass("img-fluid px-2 px-lg-4");
+            $(".proficiency").addClass("w-50 h-50");
+            //#endregion
+
+            //#region frameworks and software
+              $("#frameworks-grid, #software-grid").addClass("pt-3 pt-lg-1 pt-xl-2 d-flex flex-wrap align-content-center justify-items-center");
+              $("#frameworks-grid > div, #software-grid > div").addClass("w-50 py-2 py-md-3 py-lg-2 py-xl-2 d-flex flex-column justify-content-center align-items-center");
+              $(".frameworks-logo, .software-logo").addClass("d-flex align-items-center justify-content-center");
+            //#endregion
+          
+          //#endregion
+
+          //#region projects section
+          $("#projects > *").addClass("px-2 pb-2 pt-2");
+          $(".web-prev").addClass("w-75 img-fluid py-5 align-self-center");
+          //#endregion
+        });
+      </script>
+      <!--#endregion-->
+
+    <!--#endregion-->
+
+    <!--#region Custom CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <!--#endregion-->
+  </head>
+
+  <body>
+    <!--load jQuery script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Page Content-->
+    <div class="container-fluid row min-vh-100 m-0 p-0">
+
+      <div id="info" class="col-md-5 col-xxl-4">
+        <div id="info-inner">
+          <div id="info-header">
+            <header><h2>about me</h2></header>
+            <!--<nav>
+              <h2 class="text-center">
+                _nav <i class="fas fa-caret-right align-middle"></i>
+              </h2>
+            </nav>-->
+          </div>
+
+          <div
+            id="info-description"
+            class="d-flex flex-column justify-items-start"
+          >
+            <header id="header">
+              <img
+                id="greeting"
+                class="img-fluid"
+                src="media/greeting.svg"
+                alt="hello!"
+              />
+            </header>
+            <div id="description" class="align-self-center col-lg-8">
+              <p>
+                My name is Igbunu and I’m a UK-based front end developer. Take a
+                look at some of my projects!
+              </p>
+            </div>
+          </div>
+
+          <div id="foot">
+            <i class="fas fa-ellipsis-h mb-2"></i>
+
+            <ul id="social-links" class="list-inline list-unstyled mb-2">
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-codepen" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="far fa-envelope" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="portfolio" class="col-md-7 col-xxl-8 px-0">
+        <section id="skills" class="px-3 pb-3 pb-md-3 pt-md-0 pt-2">
+          <header class="pt-md-2"><h2>skills</h2></header>
+
+          <div
+            id="skills-slide"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="false"
+          >
+            <div class="carousel-inner">
+
+              <div
+                id="coding-languages"
+                class="
+                  carousel-item
+                  d-flex
+                  flex-column
+                  align-items-center align-content-center
+                "
+              >
+                <h3 class="pt-3 pb-2">coding languages</h3>
+
+                <div
+                  id="code-lang-list"
+                  class="w-100 px-4 py-4 d-flex flex-row align-items-stretch"
+                >
+                  <ul>
+                    <li class="lang-list" id="lHTML">
+                      <img src="media/HTML.svg" alt="" class="code-lang-img" />
+                      <div class="proficiency">
+                        <div class="progress">
+                          <div id="pb-html" class="progress-bar">HTML</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="lang-list" id="lCSS">
+                      <img src="media/CSS.svg" alt="" class="code-lang-img" />
+                      <div class="proficiency">
+                        <div class="progress">
+                          <div id="pb-css" class="progress-bar">CSS</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="lang-list" id="lJS">
+                      <img
+                        src="media/Javascript.svg"
+                        alt=""
+                        class="code-lang-img"
+                      />
+                      <div class="proficiency">
+                        <div class="progress">
+                          <div id="pb-js" class="progress-bar">JavaScript</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                id="frameworks"
+                class="
+                  carousel-item
+                  d-flex
+                  flex-column
+                  align-items-center
+                  align-content-center
+                  justify-items-center
+                "
+              >
+                <h3 class="pt-3 pb-2">frameworks</h3>
+                <div id="frameworks-grid">
+
+                  <div>
+                    <div class="frameworks-logo"><img src="media/sass_logo.svg" alt=""/></div>
+                    <p>SASS</p>
+                  </div>
+
+                  <div>
+                    <div class="frameworks-logo"><img src="media/react_logo.svg" alt=""/></div>
+                    <p>React</p>
+                  </div>
+
+                  <div>
+                    <div class="frameworks-logo"><img src="media/jquery_logo.svg" alt=""/></div>
+                    <p>jQuery</p>
+                  </div>
+
+                  <div>
+                    <div class="frameworks-logo"><img src="media/bootstrap_logo.svg" alt=""/></div>
+                    <p>Bootstrap</p>
+                  </div>
+                  
+              </div>
+              </div>
+
+              <div
+                id="software"
+                class="
+                  carousel-item
+                  active
+                  d-flex
+                  flex-column
+                  align-items-center
+                  align-content-center
+                  justify-items-center
+                "
+              >
+                <h3 class="pt-3 pb-2">other</h3>
+                <div id="software-grid">
+
+                  <div>
+                    <div class="software-logo"><img src="media/edge_logo.svg" alt=""/></div>
+                    <p>Dev Tools</p>
+                  </div>
+
+                  <div>
+                    <div class="software-logo"><img src="media/figma_logo.svg" alt=""/></div>
+                    <p>Figma</p>
+                  </div>
+
+                  <div>
+                    <div class="software-logo"><img src="media/git_logo.svg" alt=""/></div>
+                    <p>Git</p>
+                  </div>
+
+                  <div>
+                    <div class="software-logo"><img src="media/vscode_logo.svg" alt=""/></div>
+                    <p>VS Code</p>
+                  </div>
+                  
+              </div>
+              </div>
+            </div>
+
+            <button
+              title="previous"
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#skills-slide"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              title="next"
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#skills-slide"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </section>
+
+        <section id="projects" class="pt-md-0 pt-2 text-white">
+          <header><h2 class="mb-0">portfolio</h2></header>
+
+          <article id="proj1" class="d-flex flex-column pt-1">
+            <h2 class="align-self-start">1.</h2>
+
+            <img
+              class="web-prev"
+              src="media/landing page.svg"
+              alt="product landing page preview"
+            />
+
+            <div
+              class="
+                d-md-flex
+                flex-row
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="title">
+                <h3>Product Landing Page</h3>
+                <div class="d-flex flex-row justify-content-between d-md-block">
+                  <div class="web-code d-flex flex-row align-items-center ps-0">
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">HTML</span>
+                    </p>
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">CSS</span>
+                    </p>
+                  </div>
+
+                  <div class="website-links-in d-block d-md-none">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github" aria-hidden="true"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="website-links-out d-none d-md-block">
+                <a href="#" target="_blank"
+                  ><i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article id="proj2" class="d-flex flex-column pt-1">
+            <h2 class="align-self-start">2.</h2>
+
+            <img
+              class="web-prev"
+              src="media/tribute page.svg"
+              alt="product landing page preview"
+            />
+
+            <div
+              class="
+                d-md-flex
+                flex-row
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="title">
+                <h3>Leonardo DaVinci Tribute Page</h3>
+                <div class="d-flex flex-row justify-content-between d-md-block">
+                  <div class="web-code d-flex flex-row align-items-center ps-0">
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">HTML</span>
+                    </p>
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">CSS</span>
+                    </p>
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill"
+                        >JavaScript</span
+                      >
+                    </p>
+                  </div>
+
+                  <div class="website-links-in d-block d-md-none">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github" aria-hidden="true"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="website-links-out d-none d-md-block">
+                <a href="#" target="_blank"
+                  ><i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article id="proj3" class="d-flex flex-column pt-1">
+            <h2 class="align-self-start">3.</h2>
+
+            <img
+              class="web-prev"
+              src="media/technical documentation.svg"
+              alt="product landing page preview"
+            />
+
+            <div
+              class="
+                d-md-flex
+                flex-row
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="title">
+                <h3>Technical Documentation Page</h3>
+                <div class="d-flex flex-row justify-content-between d-md-block">
+                  <div class="web-code d-flex flex-row align-items-center ps-0">
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">HTML</span>
+                    </p>
+                    <p class="pe-2 mb-0">
+                      <span class="code-badge badge rounded-pill">CSS</span>
+                    </p>
+                  </div>
+
+                  <div class="website-links-in d-block d-md-none">
+                    <a href="#" target="_blank"
+                      ><i class="fab fa-github" aria-hidden="true"></i
+                    ></a>
+                    <a href="#" target="_blank"
+                      ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="website-links-out d-none d-md-block">
+                <a href="#" target="_blank"
+                  ><i class="fab fa-github" aria-hidden="true"></i
+                ></a>
+                <a href="#" target="_blank"
+                  ><i class="fas fa-globe-europe" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </div>
+
+  </body>
+</html>

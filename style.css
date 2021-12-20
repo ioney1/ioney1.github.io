@@ -1,0 +1,248 @@
+/*#region declare color variables*/
+/*#endregion*/
+/*#region set margins and rem*/
+:root {
+  font-size: 16px;
+  background-color: #fffaf9;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*#endregion*/
+/*#region font styling and colour*/
+body {
+  min-height: 100vh;
+  font-family: "Anonymous Pro", monospace;
+  font-size: calc(1rem + 0.5vw);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: calc(1rem + 0.8vw);
+}
+
+h3 {
+  font-size: calc(1.05rem + 0.45vw);
+}
+
+#foot {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#foot #social-links {
+  font-size: calc(1.25rem + 1vw);
+}
+
+#info {
+  background-color: #fffaf9;
+}
+
+/*#endregion*/
+/*#region remove link styling*/
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+a :link,
+a :hover,
+a :visited,
+a :active {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+/*#endregion*/
+/*#region style and animate links*/
+#social-links li * {
+  position: relative;
+}
+
+#social-links li * ::after {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  content: "";
+  overflow: hidden;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  color: #83c5be;
+  pointer-events: none;
+}
+
+#social-links li * :hover::after {
+  height: 100%;
+}
+
+#social-links :nth-child(1) i::after {
+  content: "\f09b";
+}
+
+#social-links :nth-child(2) i::after {
+  content: "\f1cb";
+}
+
+#social-links :nth-child(3) i::after {
+  content: "\f0e0";
+}
+
+/*#endregion*/
+/*#region skills section*/
+#skills {
+  background-color: #e29578;
+  color: white;
+}
+
+.carousel-inner div:nth-child(2) {
+  font-family: "Lato", sans-serif;
+  font-size: calc(0.8rem + 0.5vw);
+}
+
+/*
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: calc(30% + .3vw);
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
+}*/
+/*#region coding languages*/
+.progress {
+  background-color: rgba(255, 255, 255, 0.562);
+}
+
+.progress * {
+  font-family: "Lato", sans-serif;
+  color: black;
+  background-color: #fffaf9;
+  text-align: right;
+}
+
+#code-lang-list:hover #pb-html {
+  width: 75%;
+}
+
+#code-lang-list:hover #pb-css {
+  width: 70%;
+}
+
+#code-lang-list:hover #pb-js {
+  width: 68%;
+}
+
+.lang-list:hover {
+  opacity: 100%;
+}
+
+.lang-list {
+  opacity: 50%;
+  -webkit-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+}
+
+.lang-list #pb-html,
+.lang-list #pb-css,
+.lang-list #pb-js {
+  width: 0%;
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+}
+
+.code-lang-img {
+  width: calc(50px + 4vw);
+}
+
+/*#endregion*/
+/*#region frameworks*/
+.frameworks-logo, .software-logo {
+  background-color: white;
+  width: calc(50px + 2vw);
+  height: calc(50px + 2vw);
+  border-radius: 10%;
+  opacity: 60%;
+  -webkit-transition: opacity 0.25s ease-out;
+  transition: opacity 0.25s ease-out;
+}
+
+.frameworks-logo img, .software-logo img {
+  width: 80%;
+  height: 80%;
+  -webkit-filter: brightness(0%);
+          filter: brightness(0%);
+  -webkit-transition: -webkit-filter 0.25s ease-out;
+  transition: -webkit-filter 0.25s ease-out;
+  transition: filter 0.25s ease-out;
+  transition: filter 0.25s ease-out, -webkit-filter 0.25s ease-out;
+}
+
+.frameworks-logo:hover, .software-logo:hover {
+  opacity: 100%;
+}
+
+.frameworks-logo:hover img, .software-logo:hover img {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+/*#endregion*/
+/*#endregion*/
+/*#region projects section*/
+#projects,
+#proj1,
+#proj4 {
+  background-color: #83c5be;
+}
+
+#proj2 {
+  background-color: #edf6f9;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#proj3 {
+  background-color: #006d77;
+}
+
+.code-badge {
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: calc(0.5rem + 0.5vw);
+  font-family: "Lato", sans-serif;
+}
+
+.website-links-in,
+.website-links-out {
+  font-size: calc(1.25rem + 1vw);
+}
+
+.website-links-in i,
+.website-links-out i {
+  vertical-align: middle;
+}
+
+.web-code {
+  vertical-align: middle;
+}
+
+/*#endregion*/
+@media screen and (max-width: 768px) {
+  .code-lang-img {
+    max-width: 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

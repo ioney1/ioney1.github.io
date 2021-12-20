@@ -1,0 +1,263 @@
+/*#region declare color variables*/
+$ming: #006d77;
+$middle-blue-green: #83c5be;
+$alice-blue: #edf6f9;
+$unbleached-silk: #ffddd2;
+$dark-salmon: #e29578;
+$snow: #fffaf9;
+$font-primary: "Anonymous Pro", monospace;
+$font-secondary: "Lato", sans-serif;
+$font-decorative: "Homemade Apple", cursive;
+/*#endregion*/
+
+/*#region set margins and rem*/
+:root {
+  font-size: 16px;
+  background-color: $snow;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*#endregion*/
+
+/*#region font styling and colour*/
+body {
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-size: calc(1rem + 0.5vw);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: calc(1rem + 0.8vw);
+}
+
+h3 {
+  font-size: calc(1.05rem + 0.45vw);
+}
+
+#foot {
+  color: rgba(0, 0, 0, 0.5);
+  #social-links {
+    font-size: calc(1.25rem + 1vw);
+  }
+}
+
+#info {
+  background-color: $snow;
+}
+
+/*#endregion*/
+
+/*#region remove link styling*/
+a {
+  color: unset;
+  text-decoration: none;
+
+  :link,
+  :hover,
+  :visited,
+  :active {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+}
+/*#endregion*/
+
+/*#region style and animate links*/
+#social-links {
+  li * {
+    position: relative;
+
+    ::after {
+      font-family: fontAwesome;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      content: "";
+      overflow: hidden;
+      transition: 0.4s ease-in-out;
+      color: $middle-blue-green;
+      pointer-events: none;
+    }
+    :hover::after {
+      height: 100%;
+    }
+  }
+
+  :nth-child(1) {
+    i::after {
+      content: "\f09b";
+    }
+  }
+
+  :nth-child(2) {
+    i::after {
+      content: "\f1cb";
+    }
+  }
+
+  :nth-child(3) {
+    i::after {
+      content: "\f0e0";
+    }
+  }
+}
+/*#endregion*/
+
+/*#region skills section*/
+
+#skills {
+  background-color: $dark-salmon;
+  color: white;
+}
+
+.carousel-inner{
+  div:nth-child(2){
+    font-family: $font-secondary;
+    font-size: calc(0.8rem + 0.5vw);
+  }
+}
+
+/*
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: calc(30% + .3vw);
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
+}*/
+
+  /*#region coding languages*/
+  .progress {
+    background-color: rgba(255, 255, 255, 0.562);
+
+    * {
+      font-family: $font-secondary;
+      color: black;
+      background-color: $snow;
+      text-align: right;
+    }
+  }
+
+  #code-lang-list:hover {
+    #pb-html {
+      width: 75%;
+    }
+
+    #pb-css {
+      width: 70%;
+    }
+
+    #pb-js {
+      width: 68%;
+    }
+  }
+
+  .lang-list:hover {
+    opacity: 100%;
+  }
+
+  .lang-list {
+    opacity: 50%;
+    transition: opacity 0.25s ease-in;
+
+    #pb-html,
+    #pb-css,
+    #pb-js {
+      width: 0%;
+      transition: width 1s ease-out;
+    }
+  }
+
+  .code-lang-img {
+    width: calc(50px + 4vw);
+  }
+  /*#endregion*/
+
+  /*#region frameworks*/
+
+.frameworks-logo, .software-logo{
+  background-color: white;
+  width: calc(50px + 2vw);
+  height: calc(50px + 2vw);
+  border-radius:10%;
+  opacity: 60%;
+  transition: opacity 0.25s ease-out;
+
+  img{
+    width:80%;
+    height:80%;
+    filter: brightness(0%);
+    transition: filter 0.25s ease-out;
+  }
+}
+
+.frameworks-logo:hover, .software-logo:hover{
+  opacity: 100%;
+
+  img{
+    filter: unset;
+  }
+}
+
+
+/*#endregion*/
+
+/*#endregion*/
+
+/*#region projects section*/
+#projects,
+#proj1,
+#proj4 {
+  background-color: $middle-blue-green;
+}
+
+#proj2 {
+  background-color: $alice-blue;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#proj3 {
+  background-color: $ming;
+}
+
+.code-badge {
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: calc(0.5rem + 0.5vw);
+  font-family: $font-secondary;
+}
+
+.website-links-in,
+.website-links-out {
+  font-size: calc(1.25rem + 1vw);
+  i {
+    vertical-align: middle;
+  }
+}
+
+.web-code {
+  vertical-align: middle;
+}
+/*#endregion*/
+
+@media screen and (max-width: 768px) {
+  .code-lang-img {
+    max-width: 30%;
+  }
+
+}
